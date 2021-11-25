@@ -1,3 +1,56 @@
+.forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 992px) {
+  .forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 160px;
+}
+
+.card:first-child {
+  width: 240px;
+  height: 320px;
+}
+
+.temperature {
+  font-size: 24px;
+}
+
 img {
-  height: 48px;
+  height: 96px;
+}
+
+.card:first-child img {
+  height: 192px;
+}
+
+.card:first-child .temperature {
+  font-size: 48px;
+  font-weight: 200;
 }

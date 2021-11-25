@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { formatDayName } from '../Clock/formatter'
 import './Forecast.css'
 
 const WEATHER_API_KEY = '7cd1581792cb7fa3710cd45312c6415e'
@@ -37,17 +38,24 @@ function Forecast () {
     })
   }, [])
 
+  const date = new Date()
+
+  console.log(date)
   return (
-    <div>
+    <>
       <h2>{timezone}</h2>
-      <h1>Forecast</h1>
-      {forecast.map((day, dayNum) => (
-        <div key={dayNum}>
-          <p>Day [{dayNum}] temp = {day.temp.day}°</p>
-          <img src={getIcon(day.icon)} alt={day.description} />
+      <div className='forecast'>
+        <div className='cards'>
+          {forecast.map((day, dayNum) => (
+            <div key={dayNum} className='card'>
+              <p>{formatDayName(date.setDate(date.getDate() + 1) && date)}</p>
+              <img src={getIcon(day.icon)} alt={day.description} />
+              <span className='temperature'>{day.temp.day.toFixed()}°</span>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </>
   )
 }
 

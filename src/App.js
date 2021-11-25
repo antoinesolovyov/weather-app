@@ -4,10 +4,10 @@ import Forecast from './components/Forecast/Forecast'
 import './App.css'
 
 const App = () => (
-  <>
+  <main>
     <Clock />
     <Forecast />
-  </>
+  </main>
 )
 
 export default App
