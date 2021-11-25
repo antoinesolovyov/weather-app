@@ -25,3 +25,7 @@ export const formatDate = (date) => {
 
   return formatter.format(date)
 }
+
+export const formatDayName = (date) => {
+  return date.toLocaleDateString('en', { weekday: 'long' })
+}

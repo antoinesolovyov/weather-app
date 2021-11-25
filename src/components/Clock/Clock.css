@@ -1,0 +1,78 @@
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 0px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 240px;
+  }
+
+  .time {
+    font-size: 24px;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 480px;
+    align-self: center;
+  }
+
+  .time {
+    font-size: 48px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 560px;
+    align-self: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 840px;
+    align-self: center;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 960px;
+    align-self: center;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 960px;
+    align-self: center;
+  }
+}

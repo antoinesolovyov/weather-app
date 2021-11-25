@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { formatTime, formatAMPM, formatDate } from './formatter'
+import './Clock.css'
 
 function Clock () {
   const [date, setDate] = useState(new Date())
@@ -15,10 +16,13 @@ function Clock () {
   }, [])
 
   return (
-    <div className='clock'>
-      <span className='time'>{formatTime(date)}</span> <span>{formatAMPM(date)}</span>
-      <p>{formatDate(date)}</p>
-    </div>
+    <header>
+      <div className='clock'>
+        <span className='time'>{formatTime(date)}</span> <span>{formatAMPM(date)}</span>
+        <p className='date'>{formatDate(date)}</p>
+      </div>
+      <div className='location'><span>Europe</span><span>Minsk</span></div>
+    </header>
   )
 }
 
